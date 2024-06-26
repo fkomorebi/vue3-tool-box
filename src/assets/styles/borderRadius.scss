@@ -1,0 +1,25 @@
+@import "var";
+
+$step: 10;
+
+@while $step>0 {
+    .border-radius-#{$step} {
+        border-radius: #{$step}px !important;
+    }
+
+    $step: $step - 1;
+}
+
+//上下左右的边框线1px，.border-left,.border-right,.border-top,.border-bottom
+
+$p: (left, right, bottom, top);
+
+@each $var in $p {
+    .border-#{$var} {
+        border-#{$var}: 1px solid $gray-2;
+    }
+}
+
+.border {
+    border: 1px solid $gray-2;
+}

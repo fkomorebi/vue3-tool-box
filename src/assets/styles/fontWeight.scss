@@ -1,0 +1,9 @@
+$weight: 900;
+@while $weight >0 {
+    .font-weight-#{$weight} {
+        font-weight: #{$weight};
+    }
+    $weight: $weight - 100;
+}
+
+

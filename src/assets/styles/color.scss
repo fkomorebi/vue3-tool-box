@@ -1,0 +1,39 @@
+@import "var";
+//预设颜色
+
+$color-params: (
+	"default": $default-color,
+	"black": $black-color,
+	"white": $white-color,
+	"green": $green-color,
+	"blue": $blue-color,
+	"primary": $primary-color,
+	"success": $success-color,
+	"info": $info-color,
+	"warning": $warning-color,
+	"danger": $danger-color,
+	"gray": $gray-color,
+	"gray-1": $gray-1,
+	"gray-2": $gray-2,
+	"gray-3": $gray-3,
+	"gray-4": $gray-4,
+	"gray-5": $gray-5,
+	"gray-6": $gray-6,
+	"gray-7": $gray-7,
+	"gray-8": $gray-8,
+	"none": transparent,
+);
+
+@each $k, $v in $color-params {
+	.text-#{$k} {
+		color: #{$v} !important;
+	}
+
+	.bg-#{$k} {
+		background-color: #{$v} !important;
+	}
+
+	.border-#{$k} {
+		border-color: #{$v} !important;
+	}
+}

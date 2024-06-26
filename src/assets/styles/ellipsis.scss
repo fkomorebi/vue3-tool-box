@@ -1,0 +1,22 @@
+//文字超出隐藏，为1，2，3，4，5行, .line-1,.line-2,.line-3,.line-4,.line5
+
+$line: 5;
+
+.ellipsis {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+}
+
+@while $line>0 {
+    .line-#{$line} {
+        @extend .ellipsis;
+        -webkit-line-clamp: $line;
+    }
+
+    $line: $line - 1;
+}

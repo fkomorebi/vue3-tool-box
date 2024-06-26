@@ -1,0 +1,14 @@
+//字体大小，双数，最大60px，最小2px，.font-size-60,.font-size-58
+
+$step: 60;
+
+@while $step>0 {
+    .font-size-#{$step} {
+        font-size: #{$step}px !important;
+    }
+    .placeholder.font-size-#{$step}:-webkit-input-placeholder {
+        font-size: #{$step}px !important;
+    }
+
+    $step: $step - 1;
+}

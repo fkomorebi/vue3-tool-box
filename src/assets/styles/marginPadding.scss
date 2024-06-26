@@ -1,0 +1,31 @@
+//边距，margin和padding最大60px，最小2px, 例：.padded-l-58,margin-r-58
+
+$padded: 60; //*边距*/
+$direction-params: (
+    l: left,
+    r: right,
+    t: top,
+    b: bottom
+);
+
+@while $padded>=0 {
+    @each $k, $m in $direction-params {
+        .padded-#{$k}-#{$padded} {
+            padding-#{$m}: #{$padded}px !important;
+        }
+
+        .margin-#{$k}-#{$padded} {
+            margin-#{$m}: #{$padded}px !important;
+        }
+    }
+
+    .padded-#{$padded} {
+        padding: #{$padded}px !important;
+    }
+
+    .margin-#{$padded} {
+        margin: #{$padded}px !important;
+    }
+
+    $padded: $padded - 1;
+}

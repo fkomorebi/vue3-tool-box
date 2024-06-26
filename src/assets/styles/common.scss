@@ -1,0 +1,159 @@
+@import "var";
+@import "ellipsis";
+@import "flex";
+@import "fontSize";
+@import "borderRadius";
+@import "marginPadding";
+@import "fontWeight";
+@import "color";
+@import "http://at.alicdn.com/t/font_2383186_loezbtit2h.css";
+
+* {
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none !important;
+    }
+
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    line-height: 1.3;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+img:not([event]) {
+    pointer-events: none;
+}
+
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    @extend ul;
+    list-style: none;
+}
+
+:not(input, textarea) {
+    user-select: none;
+}
+
+input {
+    border: none;
+}
+
+.sticky {
+    position: sticky;
+    z-index: 99;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+@mixin co {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+$m: 36;
+
+@for $val from 1 to 6 {
+    .h#{$val} {
+        font-size: #{$m - 6 * ($val - 1)}px;
+        @include co;
+    }
+}
+
+//文本对齐方式 ， text-left,.text-right,.text-center
+@each $var in (left, right, center) {
+    .text-#{$var} {
+        text-align: #{$var};
+    }
+}
+
+//纵坐标滚动惯性（ios）
+.scrollX {
+    overflow-x: auto;
+    //-webkit-overflow-scrolling: touch;
+}
+
+.scrollY {
+    overflow-y: auto;
+    //-webkit-overflow-scrolling: touch;
+}
+
+body {
+    line-height: 1.3;
+    background-color: $gray-1;
+}
+
+//吟唱横坐标
+.hideX {
+    overflow-x: hidden;
+}
+
+//隐藏纵坐标
+.hideY {
+    overflow-y: hidden;
+}
+
+//行内块级
+.inline-block {
+    display: inline-block;
+}
+
+//块级
+.block {
+    display: block;
+}
+
+.fixed-top {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    z-index: 99;
+}
+
+.fixed-bottom {
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+    z-index: 99;
+}
+
+.break-all {
+    word-break: break-all;
+}

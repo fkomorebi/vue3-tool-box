@@ -1,0 +1,44 @@
+//颜色变量
+$primary-color: #1E78C1; //主题颜色
+$black-color: #000; //黑色
+$white-color: #fff; //白色
+$green-color: #008000; //绿色
+$blue-color: #0000ff; //蓝色
+$default-color: #212121; //默认颜色
+$success-color: #009688; //成功颜色
+$info-color: #03a9f4; //消息颜色 （偏蓝）
+$warning-color: #ffc107; //警告颜色（偏黄）
+$danger-color: #e51c23; //危险警告颜色（偏红）
+$gray-color: #969799; //灰色
+
+$gray-1: #f7f8fa;
+$gray-2: #f2f3f5;
+$gray-3: #ebedf0;
+$gray-4: #dcdee0;
+$gray-5: #c8c9cc;
+$gray-6: #969799;
+$gray-7: #646566;
+$gray-8: #323233;
+
+// 导出颜色变量
+:export {
+    primaryColor: $primary-color;
+    blackColor: $black-color;
+    whiteColor: $white-color;
+    greenColor: $green-color;
+    blueColor: $blue-color;
+    defaultColor: $default-color;
+    successColor: $success-color;
+    infoColor: $info-color;
+    warningColor: $warning-color;
+    dangerColor: $danger-color;
+    grayColor: $gray-color;
+    gray1: $gray-1;
+    gray2: $gray-2;
+    gray3: $gray-3;
+    gray4: $gray-4;
+    gray5: $gray-5;
+    gray6: $gray-6;
+    gray7: $gray-7;
+    gray8: $gray-8;
+}
